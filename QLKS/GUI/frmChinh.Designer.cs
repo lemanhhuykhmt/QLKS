@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnPhieuXuat = new System.Windows.Forms.Button();
-            this.btnPhieuNhap = new System.Windows.Forms.Button();
-            this.btnCuaHang = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnPhong = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,9 +41,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnPhieuXuat);
-            this.groupBox1.Controls.Add(this.btnPhieuNhap);
-            this.groupBox1.Controls.Add(this.btnCuaHang);
+            this.groupBox1.Controls.Add(this.btnHoaDon);
+            this.groupBox1.Controls.Add(this.btnPhong);
             this.groupBox1.Controls.Add(this.btnKhachHang);
             this.groupBox1.Controls.Add(this.btnNhanVien);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -55,32 +53,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lựa Chọn";
             // 
-            // btnPhieuXuat
+            // btnHoaDon
             // 
-            this.btnPhieuXuat.Location = new System.Drawing.Point(6, 279);
-            this.btnPhieuXuat.Name = "btnPhieuXuat";
-            this.btnPhieuXuat.Size = new System.Drawing.Size(197, 43);
-            this.btnPhieuXuat.TabIndex = 2;
-            this.btnPhieuXuat.Text = "Phiếu Mượn";
-            this.btnPhieuXuat.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Location = new System.Drawing.Point(3, 188);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(197, 43);
+            this.btnHoaDon.TabIndex = 2;
+            this.btnHoaDon.Text = "Hoá Đơn";
+            this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
-            // btnPhieuNhap
+            // btnPhong
             // 
-            this.btnPhieuNhap.Location = new System.Drawing.Point(6, 204);
-            this.btnPhieuNhap.Name = "btnPhieuNhap";
-            this.btnPhieuNhap.Size = new System.Drawing.Size(197, 43);
-            this.btnPhieuNhap.TabIndex = 2;
-            this.btnPhieuNhap.Text = "Phiếu Mượn";
-            this.btnPhieuNhap.UseVisualStyleBackColor = true;
-            // 
-            // btnCuaHang
-            // 
-            this.btnCuaHang.Location = new System.Drawing.Point(3, 139);
-            this.btnCuaHang.Name = "btnCuaHang";
-            this.btnCuaHang.Size = new System.Drawing.Size(197, 43);
-            this.btnCuaHang.TabIndex = 2;
-            this.btnCuaHang.Text = "Phiếu Mượn";
-            this.btnCuaHang.UseVisualStyleBackColor = true;
+            this.btnPhong.Location = new System.Drawing.Point(3, 139);
+            this.btnPhong.Name = "btnPhong";
+            this.btnPhong.Size = new System.Drawing.Size(197, 43);
+            this.btnPhong.TabIndex = 2;
+            this.btnPhong.Text = "Phòng";
+            this.btnPhong.UseVisualStyleBackColor = true;
+            this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
             // 
             // btnKhachHang
             // 
@@ -88,7 +79,7 @@
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(197, 43);
             this.btnKhachHang.TabIndex = 0;
-            this.btnKhachHang.Text = "Sách";
+            this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
@@ -98,7 +89,7 @@
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(197, 43);
             this.btnNhanVien.TabIndex = 0;
-            this.btnNhanVien.Text = "Độc Giả";
+            this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.UseVisualStyleBackColor = true;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
@@ -137,9 +128,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnPhieuXuat;
-        private System.Windows.Forms.Button btnPhieuNhap;
-        private System.Windows.Forms.Button btnCuaHang;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnPhong;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panel1;

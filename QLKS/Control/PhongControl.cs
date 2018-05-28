@@ -38,13 +38,19 @@ namespace QLKS.Control
         public static DataTable timKiem(string value)
         {
             string keyword = "%" + value + "%";
-            string query = "select * from Phong where TenNV like @ten or ViTri like @vitri";
+            string query = "select * from Phong where TenPhong like @ten or ViTri like @vitri";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { keyword, keyword });
         }
         public static DataTable layThongTin(int ma)
         {
             string query = "select * from Phong where MaPhong = @ma";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { ma });
+        }
+
+        public static DataTable layDanhSachPhongTrong()
+        {
+            string query = "select * from Phong where TrangThai = 1";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

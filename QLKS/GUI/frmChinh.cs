@@ -35,5 +35,23 @@ namespace QLKS.GUI
             frm.Visible = true;
             pnlNoiDung.Controls.Add(frm);
         }
+
+        private void btnPhong_Click(object sender, EventArgs e)
+        {
+            pnlNoiDung.Controls.Clear();
+            ucPhong frm = new ucPhong();
+            frm.Size = new Size(pnlNoiDung.Width, pnlNoiDung.Height);
+            frm.Visible = true;
+            pnlNoiDung.Controls.Add(frm);
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            pnlNoiDung.Controls.Clear();
+            ucHoaDon frm = new ucHoaDon();
+            frm.Size = new Size(pnlNoiDung.Width, pnlNoiDung.Height);
+            frm.Visible = true;
+            pnlNoiDung.Controls.Add(frm);
+        }
     }
 }

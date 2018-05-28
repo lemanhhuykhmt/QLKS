@@ -12,8 +12,8 @@ namespace QLKS.Control
     {
         public static int themDuLieu(int makh, int manv, DateTime ngaylap, int trangthai, double thanhtoan) // thêm dữ liệu vào bảng
         {
-            string query = "exec themhd @manv , @makh , @ngaylap , @thanhtoan , @trangthai";
-            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { manv, makh, ngaylap, thanhtoan, trangthai });
+            string query = "exec themhd @manv , @makh , @ngaylap , @thanhtoan";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { manv, makh, ngaylap, thanhtoan });
         }
         public static DataTable layDanhSach()  // lấy ra danh sách hóa đơn có tên nv, tên kh
         {
@@ -71,17 +71,17 @@ namespace QLKS.Control
         //    string query = "exec suadsb @mahdb , @masp , @soluong , @gia";
         //    return DataProvider.Instance.ExecuteNonQuery(query, new object[] { mahdb, masp, soluong, gia });
         //}
-        //public static int xoaChiTietHDB(int mahdb)
-        //{
-        //    string query = "exec xoadsb_all @ma";
-        //    return DataProvider.Instance.ExecuteNonQuery(query, new object[] { mahdb });
-        //}
-        //public static int layMaHDBMoi()
-        //{
-        //    string query = "select top(1) MaHDB from HoaDonBan order by [MaHDB] desc";
-        //    DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-        //    if (dt.Rows.Count == 0) return 0;
-        //    return Convert.ToInt32(dt.Rows[0]["MaHDB"].ToString());
-        //}
+        public static int xoaChiTietHD(int mahd)
+        {
+            string query = "exec xoacthd_all @ma";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { mahd });
+        }
+        public static int layMaHDMoi()
+        {
+            string query = "select top(1) MaHD from HoaDon order by [MaHD] desc";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0) return 0;
+            return Convert.ToInt32(dt.Rows[0]["MaHD"].ToString());
+        }
     }
 }

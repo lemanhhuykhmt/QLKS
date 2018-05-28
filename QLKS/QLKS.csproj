@@ -69,6 +69,18 @@
     <Compile Include="GUI\Sua\frmSuaNV.Designer.cs">
       <DependentUpon>frmSuaNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Sua\frmSuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Sua\frmSuaPhong.Designer.cs">
+      <DependentUpon>frmSuaPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Them\frmThemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Them\frmThemHD.Designer.cs">
+      <DependentUpon>frmThemHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Them\frmThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,18 @@
     </Compile>
     <Compile Include="GUI\Them\frmThemNV.Designer.cs">
       <DependentUpon>frmThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Them\frmThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Them\frmThemPhong.Designer.cs">
+      <DependentUpon>frmThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UC\ucHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC\ucHoaDon.Designer.cs">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UC\ucKhachHang.cs">
       <SubType>UserControl</SubType>
@@ -93,7 +117,17 @@
     <Compile Include="GUI\UC\ucNhanVien.Designer.cs">
       <DependentUpon>ucNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UC\ucPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC\ucPhong.Designer.cs">
+      <DependentUpon>ucPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ChiTietHD.cs" />
+    <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\Phong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmChinh.resx">
@@ -105,17 +139,32 @@
     <EmbeddedResource Include="GUI\Sua\frmSuaNV.resx">
       <DependentUpon>frmSuaNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Sua\frmSuaPhong.resx">
+      <DependentUpon>frmSuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Them\frmThemHD.resx">
+      <DependentUpon>frmThemHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Them\frmThemKH.resx">
       <DependentUpon>frmThemKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Them\frmThemNV.resx">
       <DependentUpon>frmThemNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Them\frmThemPhong.resx">
+      <DependentUpon>frmThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC\ucHoaDon.resx">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC\ucKhachHang.resx">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC\ucNhanVien.resx">
       <DependentUpon>ucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC\ucPhong.resx">
+      <DependentUpon>ucPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
