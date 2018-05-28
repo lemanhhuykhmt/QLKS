@@ -26,5 +26,14 @@ namespace QLKS.GUI
             frm.Visible = true;
             pnlNoiDung.Controls.Add(frm);
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            pnlNoiDung.Controls.Clear();
+            ucKhachHang frm = new ucKhachHang();
+            frm.Size = new Size(pnlNoiDung.Width, pnlNoiDung.Height);
+            frm.Visible = true;
+            pnlNoiDung.Controls.Add(frm);
+        }
     }
 }

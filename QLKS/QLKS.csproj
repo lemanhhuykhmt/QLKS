@@ -57,17 +57,35 @@
     <Compile Include="GUI\frmChinh.Designer.cs">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Sua\frmSuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Sua\frmSuaKH.Designer.cs">
+      <DependentUpon>frmSuaKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Sua\frmSuaNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Sua\frmSuaNV.Designer.cs">
       <DependentUpon>frmSuaNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Them\frmThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Them\frmThemKH.Designer.cs">
+      <DependentUpon>frmThemKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Them\frmThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Them\frmThemNV.Designer.cs">
       <DependentUpon>frmThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UC\ucKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC\ucKhachHang.Designer.cs">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UC\ucNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -81,11 +99,20 @@
     <EmbeddedResource Include="GUI\frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Sua\frmSuaKH.resx">
+      <DependentUpon>frmSuaKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Sua\frmSuaNV.resx">
       <DependentUpon>frmSuaNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Them\frmThemKH.resx">
+      <DependentUpon>frmThemKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Them\frmThemNV.resx">
       <DependentUpon>frmThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC\ucKhachHang.resx">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC\ucNhanVien.resx">
       <DependentUpon>ucNhanVien.cs</DependentUpon>

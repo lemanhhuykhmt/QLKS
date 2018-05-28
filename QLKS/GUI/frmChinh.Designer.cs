@@ -32,7 +32,7 @@
             this.btnPhieuXuat = new System.Windows.Forms.Button();
             this.btnPhieuNhap = new System.Windows.Forms.Button();
             this.btnCuaHang = new System.Windows.Forms.Button();
-            this.btnNCC = new System.Windows.Forms.Button();
+            this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNoiDung = new System.Windows.Forms.Panel();
@@ -45,7 +45,7 @@
             this.groupBox1.Controls.Add(this.btnPhieuXuat);
             this.groupBox1.Controls.Add(this.btnPhieuNhap);
             this.groupBox1.Controls.Add(this.btnCuaHang);
-            this.groupBox1.Controls.Add(this.btnNCC);
+            this.groupBox1.Controls.Add(this.btnKhachHang);
             this.groupBox1.Controls.Add(this.btnNhanVien);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -82,14 +82,15 @@
             this.btnCuaHang.Text = "Phiếu Mượn";
             this.btnCuaHang.UseVisualStyleBackColor = true;
             // 
-            // btnNCC
+            // btnKhachHang
             // 
-            this.btnNCC.Location = new System.Drawing.Point(3, 90);
-            this.btnNCC.Name = "btnNCC";
-            this.btnNCC.Size = new System.Drawing.Size(197, 43);
-            this.btnNCC.TabIndex = 0;
-            this.btnNCC.Text = "Sách";
-            this.btnNCC.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Location = new System.Drawing.Point(3, 90);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(197, 43);
+            this.btnKhachHang.TabIndex = 0;
+            this.btnKhachHang.Text = "Sách";
+            this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
@@ -139,7 +140,7 @@
         private System.Windows.Forms.Button btnPhieuXuat;
         private System.Windows.Forms.Button btnPhieuNhap;
         private System.Windows.Forms.Button btnCuaHang;
-        private System.Windows.Forms.Button btnNCC;
+        private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlNoiDung;
