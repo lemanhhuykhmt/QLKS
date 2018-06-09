@@ -88,14 +88,19 @@ namespace QLKS.GUI.UC
             }
             else if (e.ColumnIndex == dgvDanhSach.Columns["colXoa"].Index)
             {
-                int ketQua = KhachHangControl.xoaDuLieu(id);
-                if (ketQua <= 0)
+                // Hiển thị hộp thoại xác nhận xóa khách hàng
+                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa khách hàng này?", "Xóa khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult.Yes == dr)
                 {
-                    MessageBox.Show("Thực hiện thất bại");
-                }
-                else
-                {
-                    loadDuLieu();
+                    int ketQua = KhachHangControl.xoaDuLieu(id);
+                    if (ketQua <= 0)
+                    {
+                        MessageBox.Show("Thực hiện thất bại");
+                    }
+                    else
+                    {
+                        loadDuLieu();
+                    }
                 }
             }
         }

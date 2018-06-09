@@ -21,7 +21,20 @@ namespace QLKS.GUI.Them
         {
             string ten = txtTen.Text;
             string vitri = txtViTri.Text;
-            double gia = double.Parse(txtGia.Text);
+            double gia = 0;
+            //kiểm tra giá nhập vào
+            try
+            {
+                gia = double.Parse(txtGia.Text.ToString());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Giá phải là một chữ số");
+                txtGia.Text = null;
+                txtGia.Focus();
+                return;
+            }
+
             if (kiemTraDuLieu(ten, vitri, gia))
             {
                 int ketqua = PhongControl.themDuLieu(ten, vitri, gia);

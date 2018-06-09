@@ -48,43 +48,52 @@ namespace QLKS.GUI.UC
             }
             else if (e.ColumnIndex == dgvDanhSach.Columns["colXoa"].Index)
             {
-                int ketqua = NhanVienControl.xoaDuLieu(ma);
-                if (ketqua > 0)
+                // Hiển thị hộp thoại xác nhận xóa nhân viên
+                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên này?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult.Yes == dr)
                 {
-                    loadDuLieu();
+                    int ketqua = NhanVienControl.xoaDuLieu(ma);
+                    if (ketqua > 0)
+                    {
+                        loadDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thực hiện thất bại");
+                    }
                 }
             }
         }
-        private void timKiem()
-        {
-            string value = txtTimKiem.Text;
-            if (value.Length == 0)
+            private void timKiem()
+            {
+                string value = txtTimKiem.Text;
+                if (value.Length == 0)
+                {
+                    loadDuLieu();
+                    return;
+                }
+                dgvDanhSach.Rows.Clear();
+                DataTable dt = NhanVienControl.timKiem(value);
+                for (int i = 0; i < dt.Rows.Count; ++i)
+                {
+                    dgvDanhSach.Rows.Add(dt.Rows[i]["MaNV"], dt.Rows[i]["TenNV"], dt.Rows[i]["GioiTinh"], dt.Rows[i]["NgaySinh"], dt.Rows[i]["SDT"], dt.Rows[i]["Luong"]);
+                }
+            }
+            private void txtTimKiem_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+            {
+                if (e.KeyValue == 13)
+                {
+                    timKiem();
+                }
+                else if (e.KeyValue == 27)
+                {
+                    txtTimKiem.Text = "";
+                    loadDuLieu();
+                }
+            }
+            private void btnLoad_Click(object sender, EventArgs e)
             {
                 loadDuLieu();
-                return;
             }
-            dgvDanhSach.Rows.Clear();
-            DataTable dt = NhanVienControl.timKiem(value);
-            for (int i = 0; i < dt.Rows.Count; ++i)
-            {
-                dgvDanhSach.Rows.Add(dt.Rows[i]["MaNV"], dt.Rows[i]["TenNV"], dt.Rows[i]["GioiTinh"], dt.Rows[i]["NgaySinh"], dt.Rows[i]["SDT"], dt.Rows[i]["Luong"]);
-            }
-        }
-        private void txtTimKiem_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyValue == 13)
-            {
-                timKiem();
-            }
-            else if (e.KeyValue == 27)
-            {
-                txtTimKiem.Text = "";
-                loadDuLieu();
-            }
-        }
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-            loadDuLieu();
         }
     }
-}

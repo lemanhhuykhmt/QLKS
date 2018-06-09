@@ -45,11 +45,28 @@ namespace QLKS.GUI.UC
         {
             if (e.RowIndex == -1) return;
             int maVT = Convert.ToInt32(dgvDanhSach.Rows[e.RowIndex].Cells["colMa"].Value.ToString());
+            int id = Convert.ToInt32(dgvDanhSach.Rows[e.RowIndex].Cells["colMa"].Value.ToString());
             if (e.ColumnIndex == dgvDanhSach.Columns["colSua"].Index)
             {
                 frmSuaPhong frm = new frmSuaPhong(maVT);
                 frm.ShowDialog();
                 loadDuLieu();
+            }
+            else if (e.ColumnIndex == dgvDanhSach.Columns["colXoa"].Index)
+            {
+                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa phòng này không?", "Xóa phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult.Yes == dr)
+                {
+                    int ketQua = PhongControl.xoaDuLieu(id);
+                    if (ketQua <= 0)
+                    {
+                        MessageBox.Show("Thực hiện thất bại");
+                    }
+                    else
+                    {
+                        loadDuLieu();
+                    }
+                }
             }
         }
 
