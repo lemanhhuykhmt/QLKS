@@ -24,6 +24,7 @@ namespace QLKS.GUI.UC
         {
             dgvDanhSach.Rows.Clear();
             DataTable dt = KhachHangControl.layDanhSach();
+            lblCountCustomer.Text = lblCountCustomer.Text + dt.Rows.Count.ToString();
             for (int i = 0; i < dt.Rows.Count; ++i)
             {
                 dgvDanhSach.Rows.Add(new object[] { false, dt.Rows[i]["MaKH"], dt.Rows[i]["TenKH"], dt.Rows[i]["DiaChi"], dt.Rows[i]["SDT"] });

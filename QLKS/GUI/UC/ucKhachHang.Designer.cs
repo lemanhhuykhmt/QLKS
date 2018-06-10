@@ -42,6 +42,7 @@
             this.colSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCountCustomer = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.panel1.SuspendLayout();
@@ -49,17 +50,19 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(43, 23);
+            this.txtTimKiem.Location = new System.Drawing.Point(32, 19);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(198, 22);
+            this.txtTimKiem.Size = new System.Drawing.Size(150, 20);
             this.txtTimKiem.TabIndex = 5;
             this.txtTimKiem.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtTimKiem_PreviewKeyDown);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(813, 23);
+            this.btnXoa.Location = new System.Drawing.Point(476, 19);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.Size = new System.Drawing.Size(56, 19);
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // btnNhap
             // 
-            this.btnNhap.Location = new System.Drawing.Point(719, 22);
+            this.btnNhap.Location = new System.Drawing.Point(405, 18);
+            this.btnNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnNhap.Size = new System.Drawing.Size(56, 19);
             this.btnNhap.TabIndex = 0;
             this.btnNhap.Text = "Thêm khách hàng";
             this.btnNhap.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(247, 23);
+            this.btnTimKiem.Location = new System.Drawing.Point(185, 19);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(97, 23);
+            this.btnTimKiem.Size = new System.Drawing.Size(73, 19);
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // 
             this.panel2.Controls.Add(this.dgvDanhSach);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 58);
+            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(923, 559);
+            this.panel2.Size = new System.Drawing.Size(692, 454);
             this.panel2.TabIndex = 10;
             // 
             // dgvDanhSach
@@ -108,10 +114,12 @@
             this.colXoa});
             this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSach.Location = new System.Drawing.Point(0, 0);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersVisible = false;
             this.dgvDanhSach.RowTemplate.Height = 24;
-            this.dgvDanhSach.Size = new System.Drawing.Size(923, 559);
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDanhSach.Size = new System.Drawing.Size(692, 454);
             this.dgvDanhSach.TabIndex = 0;
             this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellContentClick);
             // 
@@ -164,24 +172,36 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblCountCustomer);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnNhap);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(923, 58);
+            this.panel1.Size = new System.Drawing.Size(692, 47);
             this.panel1.TabIndex = 9;
+            // 
+            // lblCountCustomer
+            // 
+            this.lblCountCustomer.AutoSize = true;
+            this.lblCountCustomer.Location = new System.Drawing.Point(560, 22);
+            this.lblCountCustomer.Name = "lblCountCustomer";
+            this.lblCountCustomer.Size = new System.Drawing.Size(112, 13);
+            this.lblCountCustomer.TabIndex = 7;
+            this.lblCountCustomer.Text = "Tổng số khách hàng: ";
             // 
             // ucKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucKhachHang";
-            this.Size = new System.Drawing.Size(923, 617);
+            this.Size = new System.Drawing.Size(692, 501);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -206,5 +226,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn colSua;
         private System.Windows.Forms.DataGridViewButtonColumn colXoa;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCountCustomer;
     }
 }

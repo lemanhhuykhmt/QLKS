@@ -38,8 +38,9 @@ namespace QLKS.Control
         }
         public static DataTable timKiem(string value)
         {
+            //Sửa tìm kiếm khách hàng
             string keyword = "%" + value + "%";
-            string query = "select * from KhachHang where TenNV like @ten or DiaChi like @diachi";
+            string query = "select * from KhachHang where TenKH like @ten or DiaChi like @diachi";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { keyword, keyword });
         }
         public static DataTable layThongTin(int ma)

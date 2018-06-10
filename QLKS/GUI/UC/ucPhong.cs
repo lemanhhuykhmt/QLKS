@@ -24,6 +24,7 @@ namespace QLKS.GUI.UC
         {
             dgvDanhSach.Rows.Clear();
             DataTable dt = PhongControl.layDanhSach();
+            lblPhong.Text = lblPhong.Text + dt.Rows.Count.ToString();
 
             for (int i = 0; i < dt.Rows.Count; ++i)
             {

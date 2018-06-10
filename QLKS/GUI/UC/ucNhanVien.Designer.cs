@@ -43,6 +43,7 @@
             this.colLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colXoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblnhanvien = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.panel3.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblnhanvien);
             this.panel1.Controls.Add(this.btnLoad);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnThem);
@@ -84,7 +86,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(412, 11);
+            this.btnThem.Location = new System.Drawing.Point(354, 14);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(102, 28);
@@ -112,6 +114,7 @@
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersVisible = false;
             this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(692, 440);
             this.dgvDanhSach.TabIndex = 0;
             this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellContentClick);
@@ -184,6 +187,15 @@
             this.colXoa.Text = "x";
             this.colXoa.UseColumnTextForButtonValue = true;
             // 
+            // lblnhanvien
+            // 
+            this.lblnhanvien.AutoSize = true;
+            this.lblnhanvien.Location = new System.Drawing.Point(515, 22);
+            this.lblnhanvien.Name = "lblnhanvien";
+            this.lblnhanvien.Size = new System.Drawing.Size(102, 13);
+            this.lblnhanvien.TabIndex = 7;
+            this.lblnhanvien.Text = "Tổng số nhân viên: ";
+            // 
             // ucNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLuong;
         private System.Windows.Forms.DataGridViewButtonColumn colSua;
         private System.Windows.Forms.DataGridViewButtonColumn colXoa;
+        private System.Windows.Forms.Label lblnhanvien;
     }
 }
