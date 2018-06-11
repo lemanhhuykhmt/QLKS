@@ -17,7 +17,11 @@ namespace QLKS.ExtendModel
             private set { instance = value; }
         }
         private DataProvider() { }
+<<<<<<< HEAD
         private string connectionString = "Data Source=MACPRO\\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True";
+=======
+        private string connectionString = @"Data Source=DANGSON\SQL2014;Initial Catalog=QLKS;Integrated Security=True";
+>>>>>>> 21be21df65bd5bbb2d9d0a4879294021cf8d801d
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             SqlConnection connection = new SqlConnection(connectionString);
