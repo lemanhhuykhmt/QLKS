@@ -17,9 +17,9 @@ namespace QLKS.Control
         }
         public static DataTable layDanhSach()  // lấy ra danh sách hóa đơn có tên nv, tên kh
         {
-            string query = "select a.MaHD, a.TenNV, kh.TenKH, a.TrangThai, a.NgayLap, " 
-                + " a.ThanhToan from(select hd.MaHD, nv.TenNV, hd.MaKH, hd.TrangThai, " 
-                + " hd.NgayLap, hd.ThanhToan from HoaDon as hd left join NhanVien as nv " 
+            string query = "select a.MaHD, a.TenNV, kh.TenKH, a.TrangThai, a.NgayLap, "
+                + " a.ThanhToan from(select hd.MaHD, nv.TenNV, hd.MaKH, hd.TrangThai, "
+                + " hd.NgayLap, hd.ThanhToan from HoaDon as hd left join NhanVien as nv "
                 + " on hd.MaNV = nv.MaNV) as a left join KhachHang as kh on a.MaKH = kh.MaKH";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
@@ -46,15 +46,15 @@ namespace QLKS.Control
         public static DataTable timKiem(object obj)
         {
             string str = "%" + obj.ToString() + "%";
-            string query = "select * from (select a.MaHD, a.TenNV, kh.TenKH, a.TrangThai, " 
-                + "a.NgayLap, a.ThanhToan from (select hd.MaHD, nv.TenNV, hd.MaKH, hd.TrangThai, " 
-                + " hd.NgayLap, hd.ThanhToan from HoaDon as hd left join NhanVien as nv on hd.MaNV " 
-                + " = nv.MaNV) as a left join KhachHang as kh on a.MaKH =  kh.MaKH) as x where " 
+            string query = "select * from (select a.MaHD, a.TenNV, kh.TenKH, a.TrangThai, "
+                + "a.NgayLap, a.ThanhToan from (select hd.MaHD, nv.TenNV, hd.MaKH, hd.TrangThai, "
+                + " hd.NgayLap, hd.ThanhToan from HoaDon as hd left join NhanVien as nv on hd.MaNV "
+                + " = nv.MaNV) as a left join KhachHang as kh on a.MaKH =  kh.MaKH) as x where "
                 + " x.TenKH like @tenkh or x.TenNV  like @tennv";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { str, str });
         }
-        
-       
+
+
         public static DataTable layDuLieu(int id)
         {
             string query = "select MaHD, MaKH, MaNV, NgayLap, TrangThai, ThanhToan from HoaDon where MaHD = @id";
